@@ -7,7 +7,7 @@
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Event</h6>
-                <h1 class="mb-5">Event Musik</h1>
+                <h1 class="mb-5">{{$title}}</h1>
             </div>
             <div class="row g-4 justify-content-center">
                 @foreach ($data as $item)

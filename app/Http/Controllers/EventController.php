@@ -20,11 +20,16 @@ class EventController extends Controller
         $category = KategoryEvent::findOrFail($categoryId); // Assuming you have a Category model
         $events = Event::where('category_id', $categoryId)->get();
 
-        return view('kategori-event', ['data' => $events]);
+        return view('kategori-event', ['data' => $events, 'title' => $category->name]);
     }
 
-    public function showEvent()
+    public function showEvent($categoryId, $eventId)
     {
-        return view('event');
+        $event = Event::find($eventId);
+
+        // Pass the event details to the view
+        return view('event', [
+            'event' => $event,
+        ]);
     }
 }

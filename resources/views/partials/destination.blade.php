@@ -7,7 +7,7 @@
         <div class="row g-3">
             <div class="col-lg-12 col-md-12">
                 <div class="row g-3">
-                    @foreach ($data as $item)
+                    @foreach ($destination as $item)
                     <div class="col-lg-3 col-md-6 wow zoomIn" data-wow-delay="0.3s">
                         <a class="position-relative d-block overflow-hidden" href="{{route('wisata.show', $item->id)}}">
                             <img class="img-fluid rounded-3" src="{{asset('/storage/' . $item->photo_path)}}" alt="">

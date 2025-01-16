@@ -12,7 +12,7 @@ class WisataController extends Controller
     public function index() 
     {
         $wisatas = Wisata::all();
-        return view('list-wisata', ['data' => $wisatas]);
+        return view('list-wisata', ['destination' => $wisatas]);
     }
 
     public function showWisata($id)
