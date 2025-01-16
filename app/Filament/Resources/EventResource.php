@@ -33,7 +33,7 @@ class EventResource extends Resource
                     ->image() // Restrict to image files
                     ->directory('uploads/photos') // Specify the upload directory
                     ->maxSize(2048),
-                Forms\Components\Textarea::make('description')
+                Forms\Components\RichEditor::make('description')
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\Select::make('category_id') // Use a select dropdown for better UX

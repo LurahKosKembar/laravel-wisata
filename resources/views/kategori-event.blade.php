@@ -10,21 +10,13 @@
                 <h1 class="mb-5">Event Musik</h1>
             </div>
             <div class="row g-4 justify-content-center">
+                @foreach ($data as $item)
                 <div class="col-lg-3 col-md-6 wow zoomIn" data-wow-delay="0.5s">
-                    <a class="position-relative d-block overflow-hidden" href="{{route('event.musik.singphoria')}}">
-                        <img class="img-fluid rounded-3" src="{{asset("img/event-musik.jpeg")}}" alt="">
+                    <a class="position-relative d-block overflow-hidden" href="{{route('event.show', [$item->category_id, $item->id])}}">
+                        <img class="img-fluid rounded-3" src="{{asset('/storage/'.$item->photo_path)}}" alt="">
                     </a>
                 </div>
-                <div class="col-lg-3 col-md-6 wow zoomIn" data-wow-delay="0.5s">
-                    <a class="position-relative d-block overflow-hidden" href="{{route('event.musik.singphoria')}}">
-                        <img class="img-fluid rounded-3" src="{{asset("img/event-musik.jpeg")}}" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 wow zoomIn" data-wow-delay="0.5s">
-                    <a class="position-relative d-block overflow-hidden" href="{{route('event.musik.singphoria')}}">
-                        <img class="img-fluid rounded-3" src="{{asset("img/event-musik.jpeg")}}" alt="">
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

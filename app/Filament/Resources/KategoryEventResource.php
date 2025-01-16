@@ -20,7 +20,6 @@ class KategoryEventResource extends Resource
     protected static ?string $model = KategoryEvent::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
     public static function form(Form $form): Form
     {
         return $form

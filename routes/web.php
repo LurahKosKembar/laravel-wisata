@@ -18,6 +18,6 @@ Route::prefix('wisata')->group(function () {
 // Event Controller
 Route::prefix('event')->group(function () {
     Route::get('/', [EventController::class, 'index'])->name('event');
-    Route::get('/musik', [EventController::class, 'musik'])->name('event.musik');
-    Route::get('/musik/singphoria', [EventController::class, 'singphoria'])->name('event.musik.singphoria');
+    Route::get('/{categoryId}', [EventController::class, 'showCategory'])->name('event.category');
+    Route::get('/{categoryId}/{eventId}', [EventController::class, 'showEvent'])->name('event.show');
 });
