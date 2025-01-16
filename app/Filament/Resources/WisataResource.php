@@ -12,6 +12,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Laravel\Facades\Image;
 
 class WisataResource extends Resource
 {
@@ -27,13 +29,12 @@ class WisataResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\RichEditor::make('description')
-                    ->required()
-                    ->maxLength(255),
+                    ->required(),
                 Forms\Components\FileUpload::make('photo_path')
                     ->required()
                     ->image() // Restrict to image files
                     ->directory('uploads/photos') // Specify the upload directory
-                    ->maxSize(2048), // Set a maximum file size (in KB)
+                    ->maxSize(2048),
             ]);
     }
 

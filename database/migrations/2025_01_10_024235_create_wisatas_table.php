@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('wisatas', function (Blueprint $table) {
             $table->id();
             $table->string('title', 255);
-            $table->string('description', 255);
+            $table->text('description');
             $table->string('photo_path', 255);
             $table->timestamps();
         });

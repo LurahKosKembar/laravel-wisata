@@ -13,6 +13,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Storage;
 
 class EventResource extends Resource
 {
@@ -31,7 +32,7 @@ class EventResource extends Resource
                     ->required()
                     ->image() // Restrict to image files
                     ->directory('uploads/photos') // Specify the upload directory
-                    ->maxSize(2048), // Set a maximum file size (in KB)
+                    ->maxSize(2048),
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->columnSpanFull(),

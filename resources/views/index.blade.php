@@ -13,6 +13,7 @@
 
 
     <!-- Destination Start -->
+    @section('destination-title', 'Destinasi Pilihan')
     @include('partials.destination')
     <!-- Destination Start -->
 
@@ -20,9 +21,9 @@
     @include('partials.booking')
     <!-- Booking Start -->
 
-    <!-- Package Start -->
-    @include('partials.inspiration')
-    <!-- Package End -->
+    <!-- Event Start -->
+    @include('partials.event')
+    <!-- Event End -->
 
     <!-- Team Start -->
     @include('partials.team')
